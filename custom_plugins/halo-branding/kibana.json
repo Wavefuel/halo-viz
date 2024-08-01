@@ -1,0 +1,14 @@
+{
+    "id": "halobranding",
+    "version": "1.0.0",
+    "kibanaVersion": "8.13.4",
+    "owner": {
+      "name": "MrPurple",
+      "githubTeam": "Wavefuel"
+    },
+    "server": false,
+    "ui": true,
+    "enabledOnAnonymousPages": true,
+    "requiredPlugins": [],
+    "optionalPlugins": []
+  }
