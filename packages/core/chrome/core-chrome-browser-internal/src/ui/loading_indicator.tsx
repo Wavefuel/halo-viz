@@ -68,25 +68,12 @@ export class LoadingIndicator extends React.Component<LoadingIndicatorProps, { v
       defaultMessage: 'Loading content',
     });
 
-    const logoImage = this.props.customLogo ? (
-      <EuiImage
-        src={this.props.customLogo}
-        data-test-subj={testSubj}
-        size={24}
-        alt="logo"
-        aria-label={i18n.translate('core.ui.chrome.headerGlobalNav.customLogoAriaLabel', {
-          defaultMessage: 'User logo',
-        })}
-      />
-    ) : (
-      <EuiIcon
-        type={'logoElastic'}
-        size="l"
-        data-test-subj={testSubj}
-        className="chrHeaderLogo__cluster"
-        aria-label={i18n.translate('core.ui.chrome.headerGlobalNav.logoAriaLabel', {
-          defaultMessage: 'Elastic Logo',
-        })}
+    const logoImage = (
+      <img
+        src="https://lighthouse-aleph-assets.s3.ap-south-1.amazonaws.com/Halo_Logo_Inverted.png"
+        height="30px"
+        width="30px"
+        alt="Halo"
       />
     );
 

@@ -10,7 +10,6 @@ import React, { FunctionComponent, createElement } from 'react';
 import { EUI_STYLES_GLOBAL, EUI_STYLES_UTILS } from '@kbn/core-base-common';
 import { RenderingMetadata } from '../types';
 import { Fonts } from './fonts';
-import { Logo } from './logo';
 import { Styles } from './styles';
 
 interface Props {
@@ -31,13 +30,16 @@ export const Template: FunctionComponent<Props> = ({
     customBranding,
   },
 }) => {
-  const title = customBranding.pageTitle ?? 'Elastic';
+  const title = customBranding.pageTitle ?? 'Halo';
   const favIcon = customBranding.faviconSVG ?? `${uiPublicUrl}/favicons/favicon.svg`;
   const favIconPng = customBranding.faviconPNG ?? `${uiPublicUrl}/favicons/favicon.png`;
-  const logo = customBranding.logo ? (
-    <img src={customBranding.logo} width="64" height="64" alt="logo" />
-  ) : (
-    <Logo />
+  const logo = (
+    <img
+      src="https://lighthouse-aleph-assets.s3.ap-south-1.amazonaws.com/Halo_Logo.png"
+      width="64"
+      height="64"
+      alt="logo"
+    />
   );
   return (
     <html lang={locale}>
@@ -82,11 +84,11 @@ export const Template: FunctionComponent<Props> = ({
               className="kbnWelcomeText"
               data-error-message={i18n('core.ui.welcomeErrorMessage', {
                 defaultMessage:
-                  'Elastic did not load properly. Check the server output for more information.',
+                  'Halo did not load properly. Check the server output for more information.',
               })}
             >
               {i18n('core.ui.welcomeMessage', {
-                defaultMessage: 'Loading Elastic',
+                defaultMessage: 'Loading Halo',
               })}
             </div>
             <div className="kbnProgress" />
@@ -104,7 +106,7 @@ export const Template: FunctionComponent<Props> = ({
           <div className="kbnWelcomeText">
             {i18n('core.ui.legacyBrowserMessage', {
               defaultMessage:
-                'This Elastic installation has strict security requirements enabled that your current browser does not meet.',
+                'This Halo installation has strict security requirements enabled that your current browser does not meet.',
             })}
           </div>
         </div>

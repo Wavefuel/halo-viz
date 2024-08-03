@@ -97,7 +97,7 @@ export function HeaderLogo({ href, navigateToApp, loadingCount$, ...observables 
       })}
     >
       <LoadingIndicator loadingCount$={loadingCount$!} customLogo={logo} />
-      {customizedLogo ? (
+      {/* {customizedLogo ? (
         <img
           src={customizedLogo}
           className="chrHeaderLogo__mark"
@@ -106,7 +106,8 @@ export function HeaderLogo({ href, navigateToApp, loadingCount$, ...observables 
         />
       ) : (
         <ElasticMark className="chrHeaderLogo__mark" aria-hidden={true} />
-      )}
+      )} */}
+      <h1 className="custom-logo-halo">HALO</h1>
     </a>
   );
 }
